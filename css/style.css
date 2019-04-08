@@ -1,0 +1,159 @@
+body{
+    overflow-y:hidden;
+    /* background: radial-gradient(white, gray);
+    *{margin:0;box-sizing: border-box;}
+     */
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar-custom{
+    padding: 20px;
+}
+.navbar-custom .navbar-nav{
+    margin: auto;
+}
+
+.navbar-custom .nav-item{
+    margin-left: 10px;
+}
+
+
+.navbar-custom .navbar-brand span{
+    background:white; 
+    color: black;
+    padding: 8px 8px 8px 0px;
+    transition: .1s;
+}
+
+.navbar-custom .nav-item a, .navbar-custom .navbar-brand{
+    color: black;
+    transition: .1s;
+}
+.navbar-custom .navbar-brand:hover{
+    color: #e22e2e;
+    transition: .1s;
+}
+.navbar-custom .navbar-brand:hover span{
+    background:#e22e2e; 
+    color: white;
+    transition: .1s;
+}
+.navbar-custom .nav-item a:hover{
+    background: #e22e2e;
+    color: white;
+    transition: .1s;
+}
+
+#monitor{
+    overflow:hidden;
+    padding: 5px;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+#display{    
+    transform-style: preserve-3d;
+    position:relative;
+    transform: translate3d(0px, 0px, 1400px);
+    transition: .5s;
+}
+
+#cube {
+    padding: 5px;
+    height: 80vh;
+    border-radius: 5px;
+    /* -webkit-animation: cube-zoom 20s infinite;
+     animation: cube-zoom 20s infinite linear; */
+    transform-style: preserve-3d;
+    transition:.5s;
+    transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.zoom {
+    transform: translate3d(0px,0px,500px)!important;
+    transition:.5s;
+}
+.zoom .page {
+    background: rgba(226, 46, 46, .6);
+    transition:.5s;
+    opacity: 1;
+}
+
+@keyframes cube-zoom{
+    from { transform: rotateY(0deg);
+      }
+      to {
+          transform: rotateY(360deg);
+      }
+  }
+
+.page {
+    position: absolute;
+    top: 20px;
+    background: rgba(169, 90, 107, 0);
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    width: 1160px;
+    left: 50%;
+    margin-left: -580px;
+    transition: .5s;
+    opacity: 0;
+
+}
+
+#cube.page1{
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: .5s;
+    opacity: 1;
+}
+#cube.page2{
+    transform: rotate3d(0, 1, 0, 45deg);
+    transition: .5s;
+    opacity: 1;
+}
+#cube.page3{
+    transform: rotate3d(0, 1, 0, 90deg);
+    transition: .5s;
+    opacity: 1;
+}
+#cube.page4{
+    transform: rotate3d(0, 1, 0, 135deg);
+    transition: .5s;
+    opacity: 1;
+}
+
+#cube.page1 .page:nth-child(1), #cube.page2 .page:nth-child(2), #cube.page3 .page:nth-child(3), #cube.page4 .page:nth-child(4){
+    opacity: 1;
+}
+
+#cube .page:nth-child(1) {
+	transform: rotateY(0deg) translate3d(0px, 0px, -1400px);
+	transition: .5s;
+
+}
+
+#cube .page:nth-child(2){
+	transform: rotateY(-45deg) translate3d(0px, 0px, -1400px);
+	transition: .5s;
+}
+
+
+#cube .page:nth-child(3) {
+	transform: rotateY(-90deg) translate3d(0px, 0px, -1400px);
+	transition: .5s;
+}
+
+
+#cube .page:nth-child(4) {
+	transform: rotateY(-135deg) translate3d(0px, 0px, -1400px);
+	transition: .5s;
+}
+
+#cube .page:nth-child(1) {
+	transform: rotateY(0deg) translate3d(0px, 0px, -1400px);
+	transition: .5s;
+
+}
+
